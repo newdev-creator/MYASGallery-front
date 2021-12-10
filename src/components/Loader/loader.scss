@@ -1,0 +1,58 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: 100vh;
+  background: vars.$backgroundDark;
+
+
+  h2 {
+    margin-left: 1em;
+    position: absolute;
+    font-size: 14vw;
+    color: #252839;
+    text-shadow: 0 0 0.3vw #383d52;
+    text-transform: uppercase;
+    user-select: none;
+  }
+
+  h2:before {
+
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: vars.$goldPolice;
+    text-shadow: 0 0 0.3vw #383d52;
+    border-right: 2px solid vars.$goldPolice;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+  }
+
+  @keyframes animate {
+
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+
+    70%,
+    90% {
+      width: 100%;
+    }
+  }
+
+}

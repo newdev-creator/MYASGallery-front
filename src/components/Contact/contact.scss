@@ -1,0 +1,113 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  h1 {
+    font-size: vars.$titleHeadSize;
+    font-weight: vars.$titleHeadBold;
+    text-transform: vars.$titleHeadTransform;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .phone-contact {
+    font-style: oblique;
+    padding-bottom: 1em;
+    border-bottom: 1px solid vars.$goldPolice;
+    margin-bottom: 2em;
+    text-align: center;
+
+    .phone-number {
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+.form-floating>.form-control {
+  border: solid 1px vars.$goldPolice;
+}
+
+.mb-3 {
+  margin: 1em 0em 1em 0em;
+  width: 60%;
+}
+
+.email {
+  margin-top: 3em;
+}
+
+.object {
+  margin-top: 3em;
+}
+
+.send_button {
+  margin: 1em 2em 2em 2em;
+
+  button {
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    display: inline-block;
+    border-radius: 10rem;
+    color: vars.$goldPolice;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: vars.$backgroundDark;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(vars.$goldPolice, 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: vars.$backgroundDark;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mb-3 {
+    width: 80%;
+  }
+
+  .send_button {
+    button {
+      padding: 1em 2em 1em 2em;
+    }
+  }
+}

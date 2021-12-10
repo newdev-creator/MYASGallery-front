@@ -1,0 +1,106 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.single-artwork {
+  width: 100%;
+  margin: auto;
+
+  .title-name-artwork {
+    font-size: vars.$titleHeadSize;
+    font-weight: vars.$titleHeadBold;
+    text-transform: vars.$titleHeadTransform;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .card-artwork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .photo-artwork {
+      width: 50%;
+      height: auto;
+      margin-bottom: 1em;
+    }
+
+    .label-artwork {
+      align-self: flex-end;
+      width: auto;
+      height: auto;
+      padding: 0.5em;
+      margin-right: 25%;
+      padding: 0.4em;
+      font-size: 0.75em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+ 
+
+  .artwork-description {
+    width: 60%;
+    text-align: justify;
+    margin-left: 3em;
+  }
+
+  .link-artist {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+   a {
+    text-decoration: none;
+    color: black;
+    margin: 1em 2em 2em 2em;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 10rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(vars.$goldPolice, 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: white;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .single-artwork .card-artwork .label-artwork {
+    width: 13em;
+    .artist-name {
+      font-size: 1.3em;
+    }
+  }
+}

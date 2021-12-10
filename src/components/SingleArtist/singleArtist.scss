@@ -1,0 +1,111 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.single-artist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title-name-artiste {
+    font-size: vars.$titleHeadSize;
+    font-weight: vars.$titleHeadBold;
+    text-transform: vars.$titleHeadTransform;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .photo-artist {
+    width: 60%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .list-artwork-artist {
+    margin-top: 1em;
+
+    .list-artwork-artist-title {
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
+
+    .my-masonry-grid {
+      padding-top: 1em;
+      padding: 0 2rem;
+      display: -webkit-box;
+      /* Not needed if autoprefixing */
+      display: -ms-flexbox;
+      /* Not needed if autoprefixing */
+      display: flex;
+      margin-left: -2rem;
+      /* gutter size offset */
+      width: auto;
+    }
+
+    .my-masonry-grid_column {
+      padding-left: 2rem;
+      /* gutter size */
+      background-clip: padding-box;
+    }
+
+    /* Style your items */
+    .my-masonry-grid_column>div {
+      /* change div to reference your elements you put in <Masonry> */
+      background: white;
+      margin-bottom: 3rem;
+    }
+
+    .list-artwork-artist-grid {
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .card {
+      align-items: center;
+      background: vars.$backgroundDark;
+      color: vars.$goldPolice;
+      border-radius: 4px;
+      transition: all 500ms;
+      overflow: hidden;
+      border: none;
+
+      &:hover {
+        z-index: 2;
+        box-shadow: vars.$boxShadow;
+        transform: translateY(-3px) scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.9);
+        box-shadow: vars.$boxShadow;
+      }
+    }
+
+  }
+
+  .artist-bio {
+    width: 80%;
+    text-align: justify;
+    margin-left: 2em;
+    align-self: flex-start;
+    padding-bottom: 1em;
+    border-bottom: 1px vars.$goldPolice solid;
+
+  }
+
+  .artwork_name {
+    background-color: white;
+    width: 100%;
+    height: 3em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+}

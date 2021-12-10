@@ -1,0 +1,34 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.home-page {
+  .title-name {
+    font-size: vars.$titleHeadSize;
+    font-weight: vars.$titleHeadBold;
+    text-transform: vars.$titleHeadTransform;
+    text-align: center;
+    padding: 0.5em;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .bio-gallery {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-page {
+    .title-name{
+      font-size: 2.5em ;
+    }
+
+    .bio-gallery {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+$backgroundDark: #212121;
+$backgroundMain: white;
+$goldPolice: #a17715;
+$blackPolice: black;
+
+$boxShadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.38);
+
+// définition générique des titres de chaque page
+
+//en-tete de page
+$titleHeadSize: 3.5em;
+$titleHeadBold: 500;
+$titleHeadTransform: capitalize;
+$titleHeadShadow: 0 2px 4px black;
+$titleHeadtext-align: center;
+
+//sous en-tete
+$subtitleSize: 2em;
+$subtitleBold: 500;
+$nameSize:2.5em;
+$nameBold: 500;
+
+
+// breakpoints
+$smallBp: (max-width:576px);
+$bigBp: (max-width:1200px);
+
+//en-tete de page
+$titleHeadSizeMQ: 2em;
+
+//sous en-tete
+$subtitleSizeMQ: 1.6em;
+$nameSizeMQ:1.3em;
+

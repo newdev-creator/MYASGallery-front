@@ -1,0 +1,20 @@
+@use 'reset';
+@use 'vars';
+
+@font-face {
+  font-family: 'Jost';
+  src: url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;700&display=swap');
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.75em;
+  }
+}

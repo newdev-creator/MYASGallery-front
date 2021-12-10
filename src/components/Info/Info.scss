@@ -1,0 +1,73 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: vars.$titleHeadSize;
+    font-weight: vars.$titleHeadBold;
+    text-transform: vars.$titleHeadTransform;
+    text-shadow: vars.$titleHeadShadow;
+    text-align: center;
+    padding: 0.5em;
+  }
+}
+
+.owner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 80%;
+    box-shadow: 0 0 15px 2px rgb(0 0 0 / 38%);
+  }
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.member {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100%;
+    box-shadow: 0 0 15px 2px rgb(0 0 0 / 38%);
+  }
+}
+
+.name {
+  font-size: 1.4em;
+  margin-top: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+.role {
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+// media queries
+
+@media screen and (max-width: 850px) {
+  .members {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .role {
+    font-size: 1em;
+  }
+  .member {
+    font-size: 3em;
+  }
+}

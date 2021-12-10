@@ -1,0 +1,39 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+@use 'sass:math';
+@import "react-slideshow-image/dist/styles.css";
+
+.carousel {
+  border-color: 1px solid black;
+  width: 60%;
+  margin: 1.5rem auto;
+}
+
+.image-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30%;
+  font-size: vars.$subtitleSize;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .carousel {
+    min-width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .carousel {
+    width: 90%;
+  }
+}
+
+
+
+
+
